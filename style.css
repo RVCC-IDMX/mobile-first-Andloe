@@ -60,6 +60,7 @@ nav > ul > li {
 nav > ul {
   text-align: center;
   padding-bottom: 2rem;
+  padding-right: 10px;
 }
 
 ul {
