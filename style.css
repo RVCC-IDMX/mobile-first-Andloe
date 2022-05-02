@@ -1,11 +1,11 @@
 /*
 Below use @import to include one or more Google Fonts
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&display=swap');
 /*
 Below use @import to include one CSS reset or normalize stylesheet of your choice
 */
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css");
 /*
 Make the embedded svg small enough so it does not to overtake the page
 */
@@ -20,3 +20,116 @@ as needed from the reset or normalize stylesheet
 Refer to README.md for more information
 
 */
+
+/* General */
+
+body {
+  padding-inline: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Text */
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h4 {
+  padding-top: 2rem;
+}
+
+p{
+  line-height: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* navbar */
+
+nav > ul > li {
+  display: inline;
+  padding-right: 10px;
+  line-height: 3rem;
+}
+
+nav > ul {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+ul {
+  padding-bottom: 2rem;
+}
+
+ul > li {
+  padding-right: 50px;
+  padding-bottom: 1rem;
+}
+
+li{
+    list-style: none;
+    line-height: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+ol {
+  padding-right: 45px;
+  padding-bottom: 2.5rem;
+}
+
+ol > li {
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+:where(ul, ol) {
+  list-style-position: inside;
+}
+
+.link-guidelines {
+  padding: 0px 10px 50px;
+  word-wrap: normal;
+  display: inline-block;
+}
+
+#files a:link {
+  color: red;
+  padding-right: 50px;
+  line-height: 2.5rem;
+}
+
+/* Skip Link */
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-100%);   
+  left: 0;
+  top: 0; 
+  padding: 1rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0%);
+}
+
+/* Only Media Query */
+
+@media print {
+  *, *::before, *::after {
+    color: black;
+    background-color: white;
+    background-image: none;
+  }
+  a::after{
+    content: " (" attr(href) ") ";
+  }
+  .skip-link {
+    display: none;
+  }
+}
